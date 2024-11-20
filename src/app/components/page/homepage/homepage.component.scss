@@ -1,0 +1,109 @@
+// @import "styles.scss";
+.background-img { 
+    width: 100%;
+    height: 500px;
+    background-image: url('/assets/img/backgroud1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    transition: background-size 4s ease;
+    
+    &:hover {
+        background-size: 111%; 
+    }
+
+    .line-center {
+        display: block;
+        height: 3px;
+        background-color: #fab702;
+        width: 80px;
+        margin: 3px auto;
+    }
+}
+.content-text-baner{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    .text-content {
+        color: #a96b11;
+        margin-bottom: 0px;
+        font-weight: 600;
+    }
+}
+.text-scroll{
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.1s linear;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  opacity: 0.1;
+  font-size: 128px;
+}
+
+:host {
+  display: block;
+  position: relative;
+  z-index: 10;
+
+  #cards {
+    .card {
+      i {
+        transform: scale(1);
+        transition: transform 0.2s;
+      }
+
+      &:hover {
+        i {
+          transform: scale(1.5);
+        }
+      }
+
+      .bg-primary-gradient {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+.image-container {
+  position: relative; 
+  width: 550px; 
+  height: 300px;
+  margin-bottom: 60px;
+}
+
+.image {
+  position: absolute; 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+}
+
+.image1 {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.image2 {
+  top: 30px;
+  left: 60px;
+  z-index: 2;
+}
+
+.image3 {
+  top: 60px;
+  left: 120px;
+  z-index: 1;
+}
